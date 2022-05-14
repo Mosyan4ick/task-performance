@@ -1,0 +1,8 @@
+1. В index.html сделаем прогрузку stats.js async.
+2. В index.html перенесем прогрузку скриптов в конец body.
+3. В styles.css в "contacts" добавим "will-change: scroll-position", а в "stickyHeader" добавим "will-change: contents". Это повысит удобство пользования. Также весь код был ужат до 1 строки, что повысит скорость прогрузки.
+4. В contacts.js была переписана обработка события "scroll". "stickyHeader.textContent = Math.floor(contacts.scrollTop/18)"
+В хедере обновляется текст на значение, находящееся на 18 пикселей ниже верха элемента. (Корректно работает на используемом 20,43% пользователей* разрешении - 1920×1080)
+
+*Информация взята с сайта https://tengyart.ru
+https://tengyart.ru/populyarnye-razresheniya-ekranov-dlya-pk-v-mire-2020/
